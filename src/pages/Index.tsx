@@ -57,6 +57,26 @@ const GAMES: Game[] = [
     rating: 4.9,
     genre: 'Adventure',
     platforms: ['windows', 'mac', 'linux']
+  },
+  {
+    id: 4,
+    title: 'Grand Theft Auto V',
+    price: 2999,
+    discount: 40,
+    image: 'https://cdn.poehali.dev/projects/d2cf1ea1-243c-40a0-9db3-649c8d853c95/files/33a73906-5d0e-4311-a7f7-72dcd63ad208.jpg',
+    rating: 4.7,
+    genre: 'Action',
+    platforms: ['windows']
+  },
+  {
+    id: 5,
+    title: 'People Playground',
+    price: 599,
+    discount: 20,
+    image: 'https://cdn.poehali.dev/projects/d2cf1ea1-243c-40a0-9db3-649c8d853c95/files/042d8510-408b-4ac2-b835-b7bce965a9e6.jpg',
+    rating: 4.6,
+    genre: 'Simulation',
+    platforms: ['windows', 'mac', 'linux']
   }
 ];
 
@@ -311,6 +331,12 @@ export default function Index() {
                   onClick={() => setSelectedGenre('Adventure')}
                 >
                   Adventure
+                </Button>
+                <Button 
+                  variant={selectedGenre === 'Simulation' ? 'default' : 'outline'}
+                  onClick={() => setSelectedGenre('Simulation')}
+                >
+                  Simulation
                 </Button>
               </div>
             </div>
